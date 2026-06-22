@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Preview-stage policy: allow all crawlers for now.
+# essm-web-lead will add noindex / restrict at the Tailscale-preview stage per dominion-lead.
