@@ -1,0 +1,14 @@
+# OS / editor
+.DS_Store
+*.swp
+*~
+
+# Local preview / temp
+TEMP-*/
+.qa-reports/tmp/
+
+# Never commit secrets (C-8)
+.env
+.env.*
+*.key
+*.pem

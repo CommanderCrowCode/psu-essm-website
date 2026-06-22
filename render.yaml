@@ -1,0 +1,42 @@
+# Render Blueprint — PSU ESSM curriculum website (pure static site)
+# https://render.com/docs/blueprint-spec
+#
+# NOTE: Render conventions for static-on-Render were routed as a consult-ask
+# through praetor (2026-06-22). This is a sensible default pending that
+# guidance — adjust service name / publish path / routes to match the mesh
+# convention once confirmed.
+services:
+  - type: web
+    name: essm-curriculum
+    runtime: static          # older Render schema used `env: static` — verify against your Render version
+    # No build step — the site is hand-authored static HTML/CSS/assets.
+    # Render may reject an empty buildCommand, so use a no-op (per openprose-web-lead).
+    buildCommand: "echo no-build"
+    staticPublishPath: ./site
+    pullRequestPreviewsEnabled: true
+    # Pretty URLs: each section has its own index.html, so no SPA catch-all
+    # rewrite. A trailing-slash request (/curriculum/) resolves to
+    # /curriculum/index.html automatically.
+    routes:
+      - type: rewrite
+        source: /curriculum
+        destination: /curriculum/
+      - type: rewrite
+        source: /about
+        destination: /about/
+      - type: rewrite
+        source: /admissions
+        destination: /admissions/
+      - type: rewrite
+        source: /people
+        destination: /people/
+      - type: rewrite
+        source: /research
+        destination: /research/
+      - type: rewrite
+        source: /contact
+        destination: /contact/
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=86400
