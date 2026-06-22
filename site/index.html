@@ -19,6 +19,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  /* Home-page mobile tweaks (essm-content-pop-2 lane) */
+  @media (max-width: 480px) {
+    .site-header--transparent .site-nav { flex-wrap: wrap; gap: 10px 14px; }
+    .site-header--transparent .site-nav a,
+    .site-header--transparent .lang-toggle { font-size: 13px; }
+    .site-header--transparent .btn { padding: 8px 14px; font-size: 13px; }
+    .hero-headline { font-size: clamp(40px, 14vw, 72px) !important; line-height: 0.86 !important; word-break: break-word; }
+    .hero-lead { font-size: 15px; max-width: 100%; }
+    .hero-ctas { flex-direction: column; align-items: flex-start; }
+    .hero-ctas .btn { width: 100%; justify-content: center; }
+    .hero-bottom-bar { flex-direction: column; gap: 6px; text-align: center; font-size: 10px; }
+  }
+</style>
 </head>
 <body>
 
@@ -52,19 +66,19 @@
 
   <!-- giant headline -->
   <div style="position:relative;z-index:4;margin-top:auto;padding:0 clamp(20px,4.5vw,64px) clamp(110px,16vh,150px);max-width:1320px;width:100%;margin-left:auto;margin-right:auto;">
-    <h1 class="display" style="font-size:var(--t-mega);line-height:.82;letter-spacing:-.035em;color:var(--paper);text-transform:uppercase;">Andaman<br><span style="font-weight:300;">Sustainability</span><br><span style="color:var(--psu-river);">Doctorate</span></h1>
-    <p style="font-family:var(--font-body);font-size:clamp(15px,1.3vw,18px);line-height:1.6;color:rgba(255,255,255,.78);max-width:46ch;margin-top:26px;">A PhD program producing independent researchers who solve the environmental and sustainability challenges of Thailand's coast — and the world.</p>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;">
+    <h1 class="display hero-headline" style="font-size:var(--t-mega);line-height:.82;letter-spacing:-.035em;color:var(--paper);text-transform:uppercase;">Andaman<br><span style="font-weight:300;">Sustainability</span><br><span style="color:var(--psu-river);">Doctorate</span></h1>
+    <p class="hero-lead" style="font-family:var(--font-body);font-size:clamp(15px,1.3vw,18px);line-height:1.6;color:rgba(255,255,255,.78);max-width:46ch;margin-top:26px;">A PhD program producing independent researchers who solve the environmental and sustainability challenges of Thailand's coast — and the world.</p>
+    <div class="hero-ctas" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;">
       <a href="/curriculum/" class="btn btn--river">Explore the Curriculum</a>
       <a href="/admissions/" class="btn btn--ghost-light">How to Apply</a>
     </div>
   </div>
 
   <!-- bottom bar -->
-  <div style="position:absolute;z-index:5;left:0;right:0;bottom:0;border-top:1px solid rgba(255,255,255,.16);">
+  <div class="hero-bottom-bar" style="position:absolute;z-index:5;left:0;right:0;bottom:0;border-top:1px solid rgba(255,255,255,.16);">
     <div style="max-width:1320px;margin:0 auto;padding:18px clamp(20px,4.5vw,64px);display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:var(--font-display);font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;">
       <span style="color:rgba(255,255,255,.6);">PSU Phuket · FTE</span>
-      <span style="color:rgba(255,255,255,.6);">Accredited · ISCED 8</span>
+      <span style="color:rgba(255,255,255,.6);">AUN-QA cycle · ISCED 8</span>
     </div>
   </div>
 </section>
@@ -74,19 +88,17 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(20px,2.5vw,32px);align-items:stretch;">
       <div style="display:flex;flex-direction:column;justify-content:space-between;padding:8px 0;">
-        <span class="eyebrow"><span class="route-line"></span>University<span class="route-dot"></span>Accredited</span>
+        <span class="eyebrow"><span class="route-line"></span>University<span class="route-dot"></span>AUN-QA cycle</span>
         <h2 class="display" style="font-size:clamp(40px,5.5vw,88px);line-height:.92;color:var(--purple-deep);text-transform:uppercase;margin-top:48px;">Where<br>knowledge<br>meets the<br><span style="color:var(--psu-blue);">coast</span></h2>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.6vw,20px);">
         <!-- IMG-EDIT-1 (docs/IMAGE_PROMPTS.md) -->
         <div class="photo-well" style="min-height:clamp(300px,40vw,480px);">
           <span class="tag photo-well__tag">Field research</span>
-          <div class="photo-well__cap">Placeholder — generate IMG-EDIT-1 (Andaman field research, duotone)</div>
         </div>
         <!-- IMG-EDIT-2 (docs/IMAGE_PROMPTS.md) -->
         <div class="photo-well" style="min-height:clamp(300px,40vw,480px);margin-top:clamp(28px,4vw,56px);background:linear-gradient(155deg,var(--purple),var(--psu-sky));">
           <span class="tag photo-well__tag" style="color:var(--purple);">Sustainability</span>
-          <div class="photo-well__cap" style="color:rgba(255,255,255,.82);">Placeholder — generate IMG-EDIT-2 (coastal ecosystem, duotone)</div>
         </div>
       </div>
     </div>
@@ -122,7 +134,7 @@
     <div class="feature-grid" style="margin-top:clamp(40px,4vw,64px);">
       <div class="feature-card card"><span class="num">01</span><h3>Regional focus, global standards</h3><p>Anchored in the Andaman coastal region, benchmarked to international doctoral standards.</p></div>
       <div class="feature-card card"><span class="num">02</span><h3>Interdisciplinary by design</h3><p>Integrate environmental science, technology, and sustainability management.</p></div>
-      <div class="feature-card card"><span class="num">03</span><h3>An original contribution</h3><p>Two international publications and a defended, publishable dissertation.</p></div>
+      <div class="feature-card card"><span class="num">03</span><h3>An original contribution</h3><p>Two international journal articles, or one article plus an innovation, creative work, or patent — and a defended, publishable dissertation.</p></div>
     </div>
   </div>
 </section>
