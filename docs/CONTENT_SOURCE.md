@@ -110,8 +110,11 @@ TQF2 หมวด 1 #9 + SAR appendix name **3 responsible faculty**:
 
 - Research interests are **NOT** cleanly stated in TQF2/SAR — do **NOT** publish interests as
   fact. Only from consented/current profile sources.
-- **People page stays gated** pending operator/faculty consent + title confirmation
-  (decision surfaced to praetor 2026-06-22). Do not publish names until cleared.
+- **People page is GATED for v1** — DECIDED by praetor 2026-06-22: names-in-TQF2 ≠ consent to a
+  marketing profile page; Tanwa's title discrepancy = false-fact risk. Do NOT publish faculty
+  names/profiles until praetor relays the operator's direction (her title + consent + whether to
+  seek the other two faculty's consent). v1 launches WITHOUT People: Home/About/Curriculum/
+  Admissions/Contact only.
 
 ## Contact — mostly UNVERIFIED
 
@@ -119,10 +122,22 @@ TQF2 หมวด 1 #9 + SAR appendix name **3 responsible faculty**:
 - NOT verified (gate): email, phone, full street address, application portal link, intake
   dates, tuition/fees. Source only from current PSU official admissions/program-office pages.
 
+## Programme duration — RESOLVED (psu-advisory-lead, TQF2 study-plan section)
+- **Plan 1.1 = a three-year study plan** (TQF2 study plan runs to Year 3 Sem 2, ~lines 744–804).
+- **Plan 1.2 = a four-year study plan** (TQF2 study plan runs to Year 4 Sem 2, ~lines 806–892).
+- Publish as plan-specific ("Plan 1.1: three-year study plan; Plan 1.2: four-year") citing the
+  TQF2 study-plan section. Do **NOT** publish a generic "3 years" for the whole programme, and
+  do **NOT** publish a max-study-period unless citing the governing PSU/Graduate School regulation
+  directly (not verified from the TQF2 extract). Home now uses "48 or 72 credits" + "100% research".
+
+## Module descriptions — guidance (psu-advisory-lead)
+- TQF2 descriptions are canonical, but the converted Markdown has table/conversion artifacts.
+  Do **NOT** label as "verbatim" unless wording is preserved exactly. Publish EITHER
+  (a) exact cleaned text checked against the TQF2 source, OR (b) a short, clearly-labeled summary.
+- Preserve these facts: 979-701/702/703 are starred **non-credit required** courses;
+  979-801 = Plan 1.1 thesis 48 cr; 979-802 = Plan 1.2 thesis 72 cr.
+
 ## Still to VERIFY (crew/QA — do not assume)
-- **Programme duration ("3 years").** Used on Home (hero pill + facts strip) from the starter;
-  NOT yet verified against TQF2 (study-period section, หมวด 1/2 ระยะเวลาการศึกษา). Verify the
-  nominal/maximum study period per plan before public sign-off; soften or correct if unconfirmed.
 - **Home quick-facts say "48 credits" (Plan 1.1 only).** Curriculum now shows both plans
   (48/72). Reconcile Home to mention both, or label as Plan 1.1, during population.
 - **PLO wording** — cross-check the 5 PLOs on /curriculum/ vs TQF2 ~line 597+.
