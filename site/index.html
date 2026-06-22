@@ -20,17 +20,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800&family=Sarabun:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <style>
-  /* Home-page mobile tweaks (essm-content-pop-2 lane) */
-  @media (max-width: 480px) {
-    .site-header--transparent .site-nav { flex-wrap: wrap; gap: 10px 14px; }
+  /* Home-page mobile tweaks — robust 360px fit (no horizontal clip) */
+  @media (max-width: 600px) {
+    .site-header--transparent .site-header__inner { flex-wrap: wrap; gap: 10px 12px; }
+    .site-header--transparent .site-nav { flex-wrap: wrap; gap: 8px 12px; }
     .site-header--transparent .site-nav a,
-    .site-header--transparent .lang-toggle { font-size: 13px; }
-    .site-header--transparent .btn { padding: 8px 14px; font-size: 13px; }
-    .hero-headline { font-size: clamp(40px, 14vw, 72px) !important; line-height: 0.86 !important; word-break: break-word; }
-    .hero-lead { font-size: 15px; max-width: 100%; }
-    .hero-ctas { flex-direction: column; align-items: flex-start; }
+    .site-header--transparent .lang-toggle { font-size: 12.5px; }
+    .site-header--transparent .btn { padding: 8px 13px; font-size: 12.5px; }
+    .hero-headline { font-size: clamp(30px, 10.5vw, 64px) !important; line-height: .92 !important; letter-spacing: -.02em !important; overflow-wrap: anywhere; word-break: break-word; }
+    .hero-lead { font-size: 14.5px; max-width: 100%; }
+    .hero-ctas { flex-direction: column; align-items: stretch; }
     .hero-ctas .btn { width: 100%; justify-content: center; }
-    .hero-bottom-bar { flex-direction: column; gap: 6px; text-align: center; font-size: 10px; }
+    .hero-bottom-bar > div { flex-direction: column; gap: 4px; text-align: center; font-size: 10px; }
   }
 </style>
 </head>
@@ -168,11 +169,12 @@
       </div>
       <div class="site-footer__links">
         <h4>Explore</h4>
+        <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/curriculum/">Curriculum</a>
         <a href="/admissions/">Admissions</a>
-        
         <a href="/research/">Research</a>
+        <a href="/contact/">Contact</a>
       </div>
       <div>
         <h4>Contact</h4>

@@ -270,7 +270,16 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; letter-spac
 /* a fact that is not yet verified — visible marker so it never ships as a guess */
 .todo-fact { color: var(--purple); border-bottom: 1px dashed var(--sritrang); }
 
+/* prevent any residual horizontal overflow/clip on narrow screens */
+html, body { overflow-x: hidden; }
+
 @media (max-width: 760px) {
   .site-footer__top { grid-template-columns: 1fr; gap: 28px; }
-  .site-nav { gap: 14px; }
+  .site-header__inner { flex-wrap: wrap; gap: 10px 14px; }
+  .site-nav { flex-wrap: wrap; gap: 8px 14px; }
+}
+@media (max-width: 600px) {
+  .site-nav a, .lang-toggle { font-size: 13px; }
+  .site-nav .btn { padding: 8px 14px; font-size: 13px; }
+  h1, h2, .display { overflow-wrap: anywhere; }
 }
