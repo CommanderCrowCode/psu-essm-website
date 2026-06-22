@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Base URL = Render service default from render.yaml (service name: essm-curriculum).
+       Custom domain is TBD; update &lt;loc&gt; host when DNS is wired. -->
+  <url>
+    <loc>https://essm-curriculum.onrender.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://essm-curriculum.onrender.com/about/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://essm-curriculum.onrender.com/curriculum/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://essm-curriculum.onrender.com/admissions/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://essm-curriculum.onrender.com/contact/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://essm-curriculum.onrender.com/research/</loc>
+    <priority>0.6</priority>
+  </url>
+  <!-- /people/ intentionally omitted (v1 gated per CONTENT_SOURCE.md + praetor direction). -->
+</urlset>
