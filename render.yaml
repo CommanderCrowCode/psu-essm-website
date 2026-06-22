@@ -1,41 +1,28 @@
 # Render Blueprint — PSU ESSM curriculum website (pure static site)
 # https://render.com/docs/blueprint-spec
 #
-# NOTE: Render conventions for static-on-Render were routed as a consult-ask
-# through praetor (2026-06-22). This is a sensible default pending that
-# guidance — adjust service name / publish path / routes to match the mesh
-# convention once confirmed.
+# Reviewed by dominion-lead (mesh infra owner) 2026-06-22:
+#  - runtime: static is the current schema (env: static is deprecated). ✓
+#  - All asset/internal paths are ABSOLUTE (/assets/..., /about/), so the
+#    per-section no-trailing-slash rewrites are redundant — removed (Render
+#    auto-serves /curriculum/index.html for both /curriculum and /curriculum/).
+#  - Deploy under the GitHub-login Render account infrastructure@tinfoil.lol
+#    (consolidation target; NOT the Google-login tanwa@tinfoil.lol).
+#  - autoDeploy: false on production — deploy manually after content +
+#    AUN-QA sign-off (matches the Lumicello precedent). PR previews stay ON.
+#  - Custom domain: owner TBD. If a PSU subdomain, DNS lives on PSU's side
+#    (hand them Render's CNAME target). If under a mesh zone, dominion-lead
+#    adds the Cloudflare CNAME. Clarify owner before wiring DNS.
 services:
   - type: web
     name: essm-curriculum
-    runtime: static          # older Render schema used `env: static` — verify against your Render version
-    # No build step — the site is hand-authored static HTML/CSS/assets.
-    # Render may reject an empty buildCommand, so use a no-op (per openprose-web-lead).
+    runtime: static
+    # No build step — hand-authored static HTML/CSS/assets. Render's static
+    # runtime can reject a truly empty buildCommand, so use a no-op.
     buildCommand: "echo no-build"
-    staticPublishPath: ./site
+    staticPublishPath: ./site   # dir whose ROOT holds the top-level index.html
+    autoDeploy: false           # manual prod deploy after sign-off
     pullRequestPreviewsEnabled: true
-    # Pretty URLs: each section has its own index.html, so no SPA catch-all
-    # rewrite. A trailing-slash request (/curriculum/) resolves to
-    # /curriculum/index.html automatically.
-    routes:
-      - type: rewrite
-        source: /curriculum
-        destination: /curriculum/
-      - type: rewrite
-        source: /about
-        destination: /about/
-      - type: rewrite
-        source: /admissions
-        destination: /admissions/
-      - type: rewrite
-        source: /people
-        destination: /people/
-      - type: rewrite
-        source: /research
-        destination: /research/
-      - type: rewrite
-        source: /contact
-        destination: /contact/
     headers:
       - path: /assets/*
         name: Cache-Control
