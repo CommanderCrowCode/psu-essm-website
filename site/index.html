@@ -14,36 +14,36 @@
 
 <!-- ================= HERO ================= -->
 <!-- IMG-HERO (see docs/IMAGE_PROMPTS.md): optional AI-generated Andaman-coast bg behind the gradient overlay -->
-<section style="position:relative;min-height:100vh;overflow:hidden;background:#0d0b26;display:flex;flex-direction:column;color:#fff;">
-  <div style="position:absolute;inset:0;background:linear-gradient(125deg,#1a1747 0%,#2b2a6b 38%,#353583 68%,#4a3fae 100%);"></div>
+<section style="position:relative;min-height:100vh;overflow:hidden;background:var(--night);display:flex;flex-direction:column;color:#fff;">
+  <div style="position:absolute;inset:0;background:linear-gradient(125deg,var(--purple-deep) 0%,var(--purple) 45%,var(--purple-light) 100%);"></div>
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 74% 26%,rgba(89,203,232,.42),transparent 60%);"></div>
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 82% 40%,rgba(182,184,220,.35),transparent 55%);"></div>
   <div style="position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(122deg,transparent 0 26px,rgba(255,255,255,.045) 26px 27px);"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,12,28,.55) 0%,transparent 26%,transparent 52%,rgba(4,10,24,.86) 100%);"></div>
 
   <!-- nav -->
-  <header style="position:relative;z-index:5;">
-    <div style="max-width:1320px;margin:0 auto;padding:24px clamp(20px,4.5vw,64px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
-      <a href="/" aria-label="Home">
+  <header class="site-header site-header--transparent" style="position:absolute;top:0;left:0;right:0;z-index:5;">
+    <div class="site-header__inner">
+      <a href="/" class="site-header__logo" aria-label="Home">
         <img src="https://te.psu.ac.th/wp-content/uploads/2024/04/Logo_Subbrand_Faculty-of-Technology_and_Environment_Full_EN-300x61.png" alt="Faculty of Technology and Environment — Prince of Songkla University" style="height:34px;width:auto;background:#fff;padding:7px 13px;border-radius:9px;">
       </a>
-      <nav style="display:flex;align-items:center;gap:clamp(14px,1.8vw,28px);flex-wrap:wrap;font-family:'Kanit',sans-serif;">
-        <a href="/" aria-current="page" style="color:#fff;font-size:14px;">Home</a>
-        <a href="/about/" style="color:rgba(255,255,255,.82);font-size:14px;">About</a>
-        <a href="/curriculum/" style="color:rgba(255,255,255,.82);font-size:14px;">Curriculum</a>
-        <a href="/admissions/" style="color:rgba(255,255,255,.82);font-size:14px;">Admissions</a>
-        <a href="/people/" style="color:rgba(255,255,255,.82);font-size:14px;">People</a>
-        <a href="/research/" style="color:rgba(255,255,255,.82);font-size:14px;">Research</a>
-        <span style="font-family:'Sarabun',sans-serif;font-weight:600;font-size:12px;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.3);padding:5px 11px;border-radius:999px;">EN&nbsp;/&nbsp;TH</span>
-        <a href="/admissions/" class="btn btn--river" style="padding:10px 20px;font-size:13.5px;">Apply</a>
+      <nav class="site-nav">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/about/">About</a>
+        <a href="/curriculum/">Curriculum</a>
+        <a href="/admissions/">Admissions</a>
+        <a href="/people/">People</a>
+        <a href="/research/">Research</a>
+        <span class="lang-toggle" aria-hidden="true">EN&nbsp;/&nbsp;TH</span>
+        <a href="/admissions/" class="btn btn--river" style="padding:9px 20px;font-size:14px;">How to Apply</a>
       </nav>
     </div>
   </header>
 
   <!-- giant headline -->
   <div style="position:relative;z-index:4;margin-top:auto;padding:0 clamp(20px,4.5vw,64px) clamp(110px,16vh,150px);max-width:1320px;width:100%;margin-left:auto;margin-right:auto;">
-    <h1 class="display" style="font-size:var(--t-mega);line-height:.82;letter-spacing:-.035em;color:#fff;text-transform:uppercase;">Andaman<br><span style="font-weight:300;">Sustainability</span><br><span style="color:#59CBE8;">Doctorate</span></h1>
-    <p style="font-family:'Sarabun',sans-serif;font-size:clamp(15px,1.3vw,18px);line-height:1.6;color:rgba(255,255,255,.78);max-width:46ch;margin-top:26px;">A PhD program producing independent researchers who solve the environmental and sustainability challenges of Thailand's coast — and the world.</p>
+    <h1 class="display" style="font-size:var(--t-mega);line-height:.82;letter-spacing:-.035em;color:#fff;text-transform:uppercase;">Andaman<br><span style="font-weight:300;">Sustainability</span><br><span style="color:var(--psu-river);">Doctorate</span></h1>
+    <p style="font-family:var(--font-body);font-size:clamp(15px,1.3vw,18px);line-height:1.6;color:rgba(255,255,255,.78);max-width:46ch;margin-top:26px;">A PhD program producing independent researchers who solve the environmental and sustainability challenges of Thailand's coast — and the world.</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;">
       <a href="/curriculum/" class="btn btn--river">Explore the Curriculum</a>
       <a href="/admissions/" class="btn btn--ghost-light">How to Apply</a>
@@ -52,7 +52,7 @@
 
   <!-- bottom bar -->
   <div style="position:absolute;z-index:5;left:0;right:0;bottom:0;border-top:1px solid rgba(255,255,255,.16);">
-    <div style="max-width:1320px;margin:0 auto;padding:18px clamp(20px,4.5vw,64px);display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:'Kanit',sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;">
+    <div style="max-width:1320px;margin:0 auto;padding:18px clamp(20px,4.5vw,64px);display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:var(--font-display);font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;">
       <span style="color:rgba(255,255,255,.6);">PSU Phuket · FTE</span>
       <span style="color:rgba(255,255,255,.6);">Accredited · ISCED 8</span>
     </div>
@@ -74,9 +74,9 @@
           <div class="photo-well__cap">Placeholder — generate IMG-EDIT-1 (Andaman field research, duotone)</div>
         </div>
         <!-- IMG-EDIT-2 (docs/IMAGE_PROMPTS.md) -->
-        <div class="photo-well" style="min-height:clamp(300px,40vw,480px);margin-top:clamp(28px,4vw,56px);background:linear-gradient(155deg,#353583,#009CDE);">
-          <span class="tag photo-well__tag" style="color:#353583;">Sustainability</span>
-          <div class="photo-well__cap" style="color:#cdeffb;">Placeholder — generate IMG-EDIT-2 (coastal ecosystem, duotone)</div>
+        <div class="photo-well" style="min-height:clamp(300px,40vw,480px);margin-top:clamp(28px,4vw,56px);background:linear-gradient(155deg,var(--purple),var(--psu-sky));">
+          <span class="tag photo-well__tag" style="color:var(--purple);">Sustainability</span>
+          <div class="photo-well__cap" style="color:rgba(255,255,255,.82);">Placeholder — generate IMG-EDIT-2 (coastal ecosystem, duotone)</div>
         </div>
       </div>
     </div>
@@ -100,14 +100,14 @@
     <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;">
       <h2 class="display" style="font-size:clamp(48px,9vw,150px);line-height:.86;color:var(--purple-deep);text-transform:uppercase;">Research<br>from<br>day one</h2>
       <!-- IMG-RESEARCH (docs/IMAGE_PROMPTS.md) -->
-      <div class="photo-well" style="width:clamp(180px,22vw,300px);aspect-ratio:3/4;flex:none;margin-top:12px;min-height:0;background:linear-gradient(155deg,#2a2c78,#3a2f86);"></div>
+      <div class="photo-well" style="width:clamp(180px,22vw,300px);aspect-ratio:3/4;flex:none;margin-top:12px;min-height:0;background:linear-gradient(155deg,var(--purple-deep),var(--purple));"></div>
     </div>
     <div style="display:flex;align-items:flex-end;gap:clamp(24px,5vw,80px);flex-wrap:wrap;margin-top:clamp(36px,4vw,56px);">
       <div style="display:flex;align-items:baseline;gap:4px;">
         <span class="display" style="font-size:clamp(72px,11vw,150px);line-height:.85;color:var(--purple);">100<span style="font-size:.5em;">%</span></span>
-        <span style="font-family:'Kanit',sans-serif;font-weight:300;font-size:clamp(28px,3.5vw,48px);color:var(--purple-deep);">research</span>
+        <span style="font-family:var(--font-display);font-weight:300;font-size:clamp(28px,3.5vw,48px);color:var(--purple-deep);">research</span>
       </div>
-      <p style="font-family:'Sarabun',sans-serif;font-size:clamp(16px,1.3vw,19px);line-height:1.65;color:var(--ink);max-width:50ch;">A progressive path — from advanced disciplinary foundations, through data analysis and a qualifying examination, to an original, internationally publishable dissertation. Anchored in the Andaman region, benchmarked to international doctoral standards.</p>
+      <p style="font-family:var(--font-body);font-size:clamp(16px,1.3vw,19px);line-height:1.65;color:var(--ink);max-width:50ch;">A progressive path — from advanced disciplinary foundations, through data analysis and a qualifying examination, to an original, internationally publishable dissertation. Anchored in the Andaman region, benchmarked to international doctoral standards.</p>
     </div>
     <div class="feature-grid" style="margin-top:clamp(40px,4vw,64px);">
       <div class="feature-card card"><span class="num">01</span><h3>Regional focus, global standards</h3><p>Anchored in the Andaman coastal region, benchmarked to international doctoral standards.</p></div>
@@ -118,14 +118,14 @@
 </section>
 
 <!-- ================= CTA BAND ================= -->
-<section style="position:relative;overflow:hidden;background:#0d0b26;color:#fff;">
-  <div style="position:absolute;inset:0;background:linear-gradient(120deg,#1a1747,#2b2a6b 55%,#43399f);"></div>
+<section style="position:relative;overflow:hidden;background:var(--night);color:#fff;">
+  <div style="position:absolute;inset:0;background:linear-gradient(120deg,var(--purple-deep),var(--purple) 55%,var(--purple-light));"></div>
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 85% 50%,rgba(89,203,232,.32),transparent 60%);"></div>
   <div style="position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(122deg,transparent 0 24px,rgba(255,255,255,.045) 24px 25px);"></div>
   <div class="container" style="position:relative;padding-top:clamp(56px,7vw,110px);padding-bottom:clamp(56px,7vw,110px);">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:36px;flex-wrap:wrap;">
       <div>
-        <span class="eyebrow" style="color:#59CBE8;"><span class="route-dot" style="background:#59CBE8;"></span>Join the next cohort</span>
+        <span class="eyebrow" style="color:var(--psu-river);"><span class="route-dot" style="background:var(--psu-river);"></span>Join the next cohort</span>
         <h2 class="display" style="font-size:clamp(40px,6vw,104px);line-height:.88;color:#fff;text-transform:uppercase;margin-top:18px;max-width:14ch;">Lead the science of a sustainable coast</h2>
       </div>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
