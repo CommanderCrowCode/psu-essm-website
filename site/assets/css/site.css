@@ -180,6 +180,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; letter-spac
 .site-header--transparent .site-nav a[aria-current="page"] { font-weight: 500; }
 .site-header--transparent .lang-toggle { color: rgba(255,255,255,.7); border-color: rgba(255,255,255,.3); }
 
+/* nav-link color rules above must NOT override button text color (legibility fix) */
+.site-header .site-nav a.btn--primary { color: var(--paper); }
+.site-header .site-nav a.btn--river  { color: #04263a; }
+
 /* ---- breadcrumb ---- */
 .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--slate); }
 .breadcrumb .here { color: var(--purple); }
